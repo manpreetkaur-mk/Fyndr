@@ -11,9 +11,7 @@ const nextConfig: NextConfig = {
     // Don't fail the build on TypeScript errors in development
     ignoreBuildErrors: false,
   },
-  experimental: {
-    serverComponentsExternalPackages: ['@prisma/client', 'prisma']
-  },
+  serverExternalPackages: ['@prisma/client', 'prisma'],
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.externals.push('_http_common');
