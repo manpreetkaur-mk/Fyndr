@@ -17,8 +17,19 @@ const eslintConfig = [
       ".next/**",
       "out/**",
       "build/**",
+      "dist/**",
       "next-env.d.ts",
+      "src/generated/**",
+      "*.config.*",
+      "public/**",
     ],
+  },
+  {
+    files: ["src/**/*.{ts,tsx,js,jsx}"],
+    rules: {
+      "@typescript-eslint/no-unused-expressions": "warn",
+      "@typescript-eslint/no-require-imports": "warn",
+    },
   },
 ];
 
